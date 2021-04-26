@@ -1,7 +1,8 @@
 movies = {
   StarWars: 4.8, 
-  Divergent: 4.7
-  }
+  Divergent: 4.7,
+  Matrix: 5
+}
 
 puts "What would you like to do? "
 puts "Hints"
@@ -15,10 +16,15 @@ choice = gets.chomp
 case choice
 when "add"
   puts "What movie would you like to add? "
-  title = gets.chomp
-  puts "What rating does the movie have? "
-  rating = gets.chomp
-  movies[title.to_s] = rating
+  title = gets.chomp.to_sym
+  if movies[title.to_sym].nil?
+    puts "What rating does the movie have? "
+    rating = gets.chomp.to_i
+    movies[title] = rating
+  else
+    puts "That movie already exists! Its rating is #{movies[title.to_sym]}."
+  end
+
 when "update"
   puts "Updated!"
 when "display"
