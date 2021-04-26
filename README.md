@@ -9,8 +9,9 @@ Keeping track of all the parts of our digital lives is a pain. Now that I know h
 > display the movies and ratings that are already in the hash, or delete a movie from the hash. If it doesn’t receive one of those four commands, the program will output some kind of error message.
 
 ## Objectives
-- To use the project to gain more expertise and comfortable with ruby a lot of room for creativity
-
+- To gain more expertise and more comfortable writing ruby code 
+- To exploit other room for creativity when handling ruby project
+- To cement and enforce the lesson learn while learning ruby.
 
 ## Built With
 - Ruby
