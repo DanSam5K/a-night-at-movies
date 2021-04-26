@@ -40,7 +40,14 @@ when "display"
     |title, rating| puts "#{title}: #{rating}"
   end
 when "delete"
-  puts "Deleted!"
+  puts "what movie would you like to delete"
+  title = gets.chomp.intern
+  if movies[title.intern].nil?
+    puts "does not exist, can\'t delete"
+  else
+    movies.delete(title.intern)
+    puts "sucessfully deleted"
+  end
 else
   puts "Error!"
 end
