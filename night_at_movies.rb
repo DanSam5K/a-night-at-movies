@@ -26,7 +26,15 @@ when "add"
   end
 
 when "update"
-  puts "Updated!"
+  puts "What movie would you like to update?"
+  title = gets.chomp.to_sym
+  if movies[title.to_sym].nil?
+    puts "movie is does not exist in library"
+  else
+    puts "What new rating does the movie have? "
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+  end
 when "display"
   puts "Movies!"
 when "delete"
