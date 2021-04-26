@@ -34,6 +34,7 @@ when "update"
     puts "What new rating does the movie have? "
     rating = gets.chomp
     movies[title.to_sym] = rating.to_i
+    puts "updated successfully"
   end
 when "display"
   movies.each do
@@ -49,7 +50,7 @@ when "delete"
     puts "sucessfully deleted"
   end
 else
-  puts "Error!"
+  puts "Input a Valid choice see Hints!"
 end
     
     
