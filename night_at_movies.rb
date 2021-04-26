@@ -36,7 +36,9 @@ when "update"
     movies[title.to_sym] = rating.to_i
   end
 when "display"
-  puts "Movies!"
+  movies.each do
+    |title, rating| puts "#{title}: #{rating}"
+  end
 when "delete"
   puts "Deleted!"
 else
